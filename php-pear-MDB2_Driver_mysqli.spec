@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - mysqli MDB2 driver
 Summary(pl):	%{_pearname} - sterownik mysqli dla MDB2
 Name:		php-pear-%{_pearname}
-Version:	1.0.1
+Version:	1.0.3
 Release:	1
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	86ab112e787fff571f06dba353037da3
+# Source0-md5:	53d4aa09b384d6c37f697ced40f6e816
 URL:		http://pear.php.net/package/MDB2_Driver_mysqli/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -20,7 +20,7 @@ BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:5.0.0
 Requires:	php-mysqli
 Requires:	php-pear
-Requires:	php-pear-MDB2 >= 1:2.0.1
+Requires:	php-pear-MDB2 >= 1:2.0.3
 Requires:	php-pear-PEAR-core >= 1:1.0b1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
