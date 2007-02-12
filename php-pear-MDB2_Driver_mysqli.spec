@@ -5,7 +5,7 @@
 %define		_pearname	MDB2_Driver_mysqli
 
 Summary:	%{_pearname} - mysqli MDB2 driver
-Summary(pl):	%{_pearname} - sterownik mysqli dla MDB2
+Summary(pl.UTF-8):   %{_pearname} - sterownik mysqli dla MDB2
 Name:		php-pear-%{_pearname}
 Version:	1.2.2
 Release:	2
@@ -30,7 +30,7 @@ This is the MySQLi MDB2 driver.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Sterownik MySQLi dla MDB2.
 
 Ta klasa ma w PEAR status: %{_status}.
