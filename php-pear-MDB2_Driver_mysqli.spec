@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - mysqli MDB2 driver
 Summary(pl.UTF-8):	%{_pearname} - sterownik mysqli dla MDB2
 Name:		php-pear-%{_pearname}
-Version:	1.3.0
+Version:	1.4.1
 Release:	1
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	e532d0fa05b1b328ae4d74ff510e542c
+# Source0-md5:	eb93eb4687da1a1018c832622da42f6f
 URL:		http://pear.php.net/package/MDB2_Driver_mysqli/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -34,6 +34,20 @@ In PEAR status of this package is: %{_status}.
 Sterownik MySQLi dla MDB2.
 
 Ta klasa ma w PEAR status: %{_status}.
+
+%package tests
+Summary:	Tests for PEAR::%{_pearname}
+Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
+Group:		Development/Languages/PHP
+Requires:	%{name} = %{epoch}:%{version}-%{release}
+AutoReq:	no
+AutoProv:	no
+
+%description tests
+Tests for PEAR::%{_pearname}.
+
+%description tests -l pl.UTF-8
+Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
@@ -57,3 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/MDB2/Driver/mysqli.php
 %{php_pear_dir}/MDB2/Driver/Function/mysqli.php
 %{php_pear_dir}/data/MDB2_Driver_mysqli
+
+%files tests
+%defattr(644,root,root,755)
+%{php_pear_dir}/tests/%{_pearname}
